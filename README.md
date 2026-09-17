@@ -1,16 +1,67 @@
-# React + Vite
+# Frontend Mentor - Rock, Paper, Scissors solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### The challenge
 
-## Expanding the ESLint configuration
+Users should be able to:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- View the optimal layout for the game depending on their device's screen size
+- Play Rock, Paper, Scissors against the computer
+- See a countdown animation before the computer makes its choice
+- See a dynamic glowing effect highlighting the winner
+
+### Screenshot
+
+![Desktop Preview](./design/desktop-preview.jpg)
+*(Note: Replace with your actual screenshot path)*
+
+### Links
+
+- Solution URL: [Add solution URL here]
+- Live Site URL: [Add live site URL here]
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties (Variables)
+- Flexbox (Advanced alignment and ordering)
+- Responsive Design (Media Queries & `clamp()`)
+- [React](https://reactjs.org/) - JS library
+- [Vite](https://vitejs.dev/) - Frontend Tooling
+
+### What I learned
+
+During this project, I focused heavily on writing clean, modular React code and mastering advanced CSS layout techniques. Some of my major learnings include:
+
+**1. Dynamic Rendering with Dictionaries in React:**
+Instead of writing repetitive HTML for each choice (rock, paper, scissors), I learned how to use a dictionary object to dynamically map the user's choice to the correct icon and CSS class.
+
+```jsx
+const icons = {
+  paper: paperIcon,
+  scissors: scissorsIcon,
+  rock: rockIcon
+};
+
+// Rendering dynamically based on state
+<div className={userChoice}>
+  <img src={icons[userChoice]} alt={userChoice} />
+</div>
