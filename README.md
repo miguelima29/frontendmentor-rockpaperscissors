@@ -28,13 +28,13 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop Preview](./design/desktop-preview.jpg)
-*(Note: Replace with your actual screenshot path)*
+<img width="1333" height="932" alt="image" src="https://github.com/user-attachments/assets/fc46027c-aae7-4929-81bf-012f26387113" />
+
 
 ### Links
 
-- Solution URL: [Add solution URL here]
-- Live Site URL: [Add live site URL here]
+- Solution URL: https://github.com/miguelima29/frontendmentor-rockpaperscissors/
+- Live Site URL: https://frontendmentor-rockpaperscissors-five.vercel.app/
 
 ## My process
 
@@ -65,3 +65,40 @@ const icons = {
 <div className={userChoice}>
   <img src={icons[userChoice]} alt={userChoice} />
 </div>
+```
+
+**2. Advanced CSS Layouts for Mobile:**
+I learned how to drastically change the visual layout without altering the HTML structure, which is great for accessibility and React logic. Using flex-direction: column-reverse and the order property allowed me to perfectly match the mobile design.
+
+```css
+@media (max-width: 768px) {
+    /* Flipping the title and the coin vertically */
+    .player-side, .house-side {
+        flex-direction: column-reverse;
+    }
+
+    /* Forcing the result outcome to break to the next line */
+    .result-outcome {
+        order: 3;
+        width: 100%;
+    }
+}
+```
+
+### Continued development
+
+In future updates, I plan to:
+- Build the "Bonus" layout (Rock, Paper, Scissors, Lizard, Spock).
+
+### AI Collaboration
+
+Tool Used: Google Gemini
+
+How it was used: I used Gemini as an interactive pair-programming mentor. Instead of just generating code, I used it to discuss architecture (like lifting state to App.jsx), troubleshoot CSS overflow issues, and brainstorm solutions for tricky layouts (like the mobile reordering).
+
+What worked well: It was excellent for understanding why a CSS rule wasn't working (e.g., conflicting widths in mobile) and for learning best practices in React (like separating the logic in gamelogic.js from the UI components).
+
+## Author
+Frontend Mentor - @miguelima29
+
+LinkedIn - [Miguel Lima](https://www.linkedin.com/in/miglim/)
