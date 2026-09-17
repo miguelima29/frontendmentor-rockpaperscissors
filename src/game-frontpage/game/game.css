@@ -1,0 +1,111 @@
+:root{
+    /*SIZES*/
+    --options-size: clamp(8.5rem, 20vw, 13rem);
+    --triangle-size: clamp(17rem, 38vw, 24rem);
+    --border-size: clamp(1rem, 2.5vw, 2rem);
+    --game-image: clamp(40%, 40%, 50%);
+}
+
+.main-game{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.main-game-content{
+    position:relative;
+    margin-top:8rem;
+}
+
+.triangle{
+    width: var(--triangle-size);
+    height: auto;
+}
+
+.paper{
+    top: calc(var(--options-size) * -0.25);
+    left:calc(var(--options-size) * -0.25);
+    border-color: var(--blue500);
+    --shadow-color: var(--blue700);
+}
+
+.rock{
+    bottom: calc(var(--options-size) * -0.25);
+    left: 50%;
+    transform: translateX(-50%);
+    --shadow-color: var(--red800);  
+    border-color: var(--red600);
+}
+
+.scissors{
+    top: calc(var(--options-size) * -0.25);
+    right: calc(var(--options-size) * -0.25);
+    border-color: var(--gold500);
+    --shadow-color: var(--gold600);
+}
+
+.paper:hover, .scissors:hover{
+    transform: scale(1.05);
+}
+
+.rock:hover{
+    transform: scale(1.05) translateX(-50%);
+}
+
+
+.paper, .rock, .scissors{
+    position:absolute;
+    width: var(--options-size);
+    height: var(--options-size);
+    border-radius: 50%;
+    background-color: white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow: inset 0 0.5rem 0 rgba(0, 0, 0, 0.1),
+                0 0.7rem 0 var(--shadow-color);
+    border-width: var(--border-size);
+    border-style: solid;
+
+    cursor: pointer;
+    transition: transform 0.12s ease-in-out;
+}
+
+.paper img, .rock img, .scissors img{
+    width: var(--game-image);
+    height: auto;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 359px){
+    .triangle{
+        display:none;
+    }
+    .main-game-content{
+        margin-top: 1.5rem;
+    }
+
+    .game-options{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap: 1.2rem;
+    }
+
+    .paper, .rock, .scissors{
+        position:relative;
+        top:auto;
+        left:auto;
+        right:auto;
+        bottom:auto;
+        transform: none;
+    }
+
+    .rock:hover{
+        transform: scale(1.05);
+    }
+}

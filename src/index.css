@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+:root{
+  /*- Mobile: 375px - Desktop: 1366px*/
+  
+  /*PRIMARY COLORS*/
+  --gold500: hsl(39, 89%, 49%);
+  --gold600: hsl(28, 76%, 44%);
+  --blue500: hsl(230, 89%, 62%);
+  --blue700: hsl(229, 64%, 46%);
+  --red600: hsl(349, 71%, 52%);
+  --red800: hsl(347, 75%, 35%);
+  --purple600: hsl(261, 73%, 60%);
+  --purple700: hsl(261, 51%, 44%);
+  --lightblue400: hsl(189, 59%, 53%);
+  --lightblue500: hsl(194, 58%, 42%);
+
+  /* NEUTRAL COLORS */
+  --navy900: hsl(229, 25%, 31%); /*(dark text)*/
+  --blue700: hsl(229, 64%, 46%); /*(score text)*/
+  --gray600: hsl(246, 11%, 37%); /*(header outline)*/
+
+  /*BACKGROUND COLORS*/
+  --background-radial: radial-gradient(circle at 50% 20%, hsl(214, 47%, 23%), hsl(237, 48%, 15%));
+
+  /* FONTS */
+  --font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+*{
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body{
+  background: var(--background-radial);
+  font-family: var(--font-family);
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}

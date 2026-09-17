@@ -1,0 +1,124 @@
+.result {
+    --options-size: clamp(10rem, 20vw, 18rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.result-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12rem; 
+    
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.result .paper, .result .rock, .result .scissors {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+}
+
+.player-side, .house-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.empty-circle {
+    width: var(--options-size);
+    height: var(--options-size);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:3rem;
+    width:100%;
+    margin-top:4rem;
+    flex-wrap:wrap;
+}
+
+
+.result-title {
+    color: white;
+    letter-spacing: 0.12rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.result-outcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    min-width: 300px;
+    z-index: 3;
+}
+
+.result-outcome-title {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.result-outcome-button {
+    background-color: white;
+    color: var(--navy900);
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    padding: 0.9rem 3.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (max-width: 768px) {
+    .result {
+        --options-size: clamp(8.5rem, 30vw, 12rem); 
+    }
+    
+
+    .player-side, .house-side {
+        flex-direction: column-reverse;
+        gap: 2rem; 
+        max-width: 45%;
+    }
+
+    .result-outcome {
+        order: 3;
+        width: 100%;
+        margin-top: 2rem; 
+    }
+
+    .result-title {
+        font-size: 0.9rem;
+        letter-spacing: 0.05rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 359px) {
+}
